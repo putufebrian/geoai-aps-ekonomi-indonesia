@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeoAI Ekonomi</title>
+</head>
+<body>
+    <h2>Analisis Geospasial Pertumbuhan PDRB</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" required>
+        <button type="submit">Analisis</button>
+    </form>
+
+    <hr>
+
+    {{ map|safe }}
+</body>
+</html>
